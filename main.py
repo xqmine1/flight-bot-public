@@ -5,6 +5,22 @@ import requests
 from pathlib import Path
 from datetime import datetime, timezone, timedelta, date
 
+from config import (
+    CURRENCY,
+    MAX_TELEGRAM_MESSAGE_LENGTH,
+    SEARCH_DAYS_AHEAD,
+    DEDUP_KEEP_DAYS,
+    SENT_DB_FILENAME,
+    BEACH_DESTINATION_LIMITS,
+    HUB_DESTINATION_LIMITS,
+    DIRECT_ONLY_DESTINATIONS,
+    BEACH_ORIGINS,
+    HUB_ORIGINS,
+    ORIGIN_NAMES,
+    DESTINATION_NAMES,
+    AIRPORT_CITY_NAMES,
+)
+
 print("RUNNING GITHUB ACTIONS FLIGHT BOT")
 
 # ====== ТОКЕНЫ И ПЕРЕМЕННЫЕ ОКРУЖЕНИЯ ======
@@ -23,157 +39,21 @@ if not TRAVELPAYOUTS_TOKEN:
     raise ValueError("Не найден TRAVELPAYOUTS_TOKEN в GitHub Secrets")
 
 
-# ====== ОБЩИЕ НАСТРОЙКИ ======
-
-CURRENCY = "rub"
-MAX_TELEGRAM_MESSAGE_LENGTH = 3800
+# ====== РЕЖИМ ПОИСКА ======
 
 # Режимы:
 # beach — пляжные направления
 # hubs — хабы
 SEARCH_MODE = (os.getenv("SEARCH_MODE") or "beach").lower().strip()
 
-
-# ====== АНТИДУБЛЬ ======
-
-# Антидубль включён только для режима hubs.
-# Для beach антидубль не используется.
+# Антидубль включён только для hubs.
+# Для beach он вообще не используется.
 DEDUP_ENABLED = SEARCH_MODE == "hubs"
 
-# База отправленных билетов для хабов.
-# Создавать вручную не нужно — файл появится сам после запуска hubs.
-SENT_DB_PATH = Path("sent_tickets_hubs.json")
-
-# Сколько дней помнить отправленные хабовые билеты.
-DEDUP_KEEP_DAYS = 30
-
-
-# ====== ЛИМИТЫ ПО НАПРАВЛЕНИЯМ ======
-
-BEACH_DESTINATION_LIMITS = {
-    "HKT": 25000,  # Пхукет
-    "BKK": 25000,  # Бангкок
-    "DPS": 25000,  # Бали
-    "KUL": 25000,  # Куала-Лумпур
-    "CXR": 25000,  # Нячанг
-    "DAD": 25000,  # Дананг
-    "MLE": 25000,  # Мальдивы
-    "CMB": 25000,  # Шри-Ланка
-}
-
-HUB_DESTINATION_LIMITS = {
-    "HAN": 25000,  # Ханой, можно с пересадками
-    "SGN": 25000,  # Хошимин, можно с пересадками
-    "SCO": 6000,   # Актау, только прямой
-    "NQZ": 7000,   # Астана, только прямой
-    "ALA": 10000,  # Алматы, только прямой
-    "TAS": 10000,  # Ташкент, только прямой
-}
-
-DIRECT_ONLY_DESTINATIONS = {
-    "SCO",  # Актау
-    "NQZ",  # Астана
-    "ALA",  # Алматы
-    "TAS",  # Ташкент
-}
-
-
-# ====== ГОРОДА ВЫЛЕТА ======
-
-# Для пляжных направлений оставляем все города.
-BEACH_ORIGINS = ["SVX", "KZN", "UFA", "TJM", "PEE", "CEK"]
-
-# Для хабов только близкие к Екатеринбургу города.
-HUB_ORIGINS = ["SVX", "TJM", "PEE", "CEK"]
-
-
-# ====== НАЗВАНИЯ ГОРОДОВ ======
-
-ORIGIN_NAMES = {
-    "SVX": "Екатеринбург",
-    "KZN": "Казань",
-    "UFA": "Уфа",
-    "TJM": "Тюмень",
-    "PEE": "Пермь",
-    "CEK": "Челябинск",
-}
-
-DESTINATION_NAMES = {
-    # Пляжные направления
-    "HKT": "Пхукет",
-    "BKK": "Бангкок",
-    "DPS": "Бали",
-    "KUL": "Куала-Лумпур",
-    "CXR": "Нячанг",
-    "DAD": "Дананг",
-    "MLE": "Мальдивы",
-    "CMB": "Шри-Ланка",
-
-    # Хабы
-    "HAN": "Ханой",
-    "SGN": "Хошимин",
-    "SCO": "Актау",
-    "NQZ": "Астана",
-    "ALA": "Алматы",
-    "TAS": "Ташкент",
-}
-
-AIRPORT_CITY_NAMES = {
-    # Россия / СНГ
-    "SVO": "Москве",
-    "DME": "Москве",
-    "VKO": "Москве",
-    "LED": "Санкт-Петербурге",
-    "ALA": "Алматы",
-    "NQZ": "Астане",
-    "TAS": "Ташкенте",
-    "SCO": "Актау",
-    "FRU": "Бишкеке",
-    "GYD": "Баку",
-    "EVN": "Ереване",
-    "TBS": "Тбилиси",
-
-    # Китай
-    "PEK": "Пекине",
-    "PKX": "Пекине",
-    "PVG": "Шанхае",
-    "SHA": "Шанхае",
-    "CAN": "Гуанчжоу",
-    "SZX": "Шэньчжэне",
-    "URC": "Урумчи",
-    "TFU": "Чэнду",
-    "CTU": "Чэнду",
-
-    # Ближний Восток / Турция
-    "IST": "Стамбуле",
-    "SAW": "Стамбуле",
-    "DXB": "Дубае",
-    "DWC": "Дубае",
-    "AUH": "Абу-Даби",
-    "DOH": "Дохе",
-    "MCT": "Маскате",
-    "SHJ": "Шардже",
-
-    # Юго-Восточная Азия / острова
-    "BKK": "Бангкоке",
-    "DMK": "Бангкоке",
-    "HKT": "Пхукете",
-    "KUL": "Куала-Лумпуре",
-    "SIN": "Сингапуре",
-    "HAN": "Ханое",
-    "SGN": "Хошимине",
-    "CXR": "Нячанге",
-    "DAD": "Дананге",
-    "DPS": "Денпасаре",
-    "MLE": "Мале",
-    "CMB": "Коломбо",
-}
+SENT_DB_PATH = Path(SENT_DB_FILENAME)
 
 
 # ====== ПЕРИОД ПОИСКА ======
-
-# Бот ищет билеты с сегодняшнего дня на 180 дней вперёд.
-SEARCH_DAYS_AHEAD = 180
 
 SEARCH_START_DATE = datetime.now(timezone.utc).date()
 SEARCH_END_DATE = SEARCH_START_DATE + timedelta(days=SEARCH_DAYS_AHEAD)
@@ -200,7 +80,7 @@ def generate_search_months(start_date: date, end_date: date):
 MONTHS = generate_search_months(SEARCH_START_DATE, SEARCH_END_DATE)
 
 
-# ====== РЕЖИМЫ ПОИСКА ======
+# ====== РЕЖИМЫ И МАРШРУТЫ ======
 
 def get_active_origins():
     if SEARCH_MODE == "beach":
@@ -236,6 +116,7 @@ def build_routes():
     routes = []
     active_origins = get_active_origins()
     destination_limits = get_active_destination_limits()
+
     for origin in active_origins:
         for destination, price_limit in destination_limits.items():
             for month in MONTHS:
@@ -442,7 +323,7 @@ def make_compact_link(link: str) -> str:
     return link.split("?")[0]
 
 
-# ====== АНТИДУБЛЬ ДЛЯ HUBS ======
+# ====== АНТИДУБЛЬ ТОЛЬКО ДЛЯ HUBS ======
 
 def now_iso():
     return datetime.now(timezone.utc).isoformat()
@@ -812,6 +693,9 @@ def main():
 
     sent_db = None
 
+    # Важно:
+    # Для beach этот блок не выполняется.
+    # Антидубль загружается только для hubs.
     if DEDUP_ENABLED:
         sent_db = load_sent_db()
         cleanup_sent_db(sent_db)
@@ -906,9 +790,9 @@ def main():
             blocks.append(f"<b>{index})</b> {item['block']}")
 
         message = (
-    f"{get_mode_title()}\n\n"
-    + "\n\n--------------------\n\n".join(blocks)
-)
+            f"{get_mode_title()}\n\n"
+            + "\n\n--------------------\n\n".join(blocks)
+        )
 
         send_long_telegram_message(message)
 
@@ -917,19 +801,28 @@ def main():
             save_sent_db(sent_db)
 
         print(f"Отправлено новых находок: {found_count}")
-        print(f"Дублей пропущено: {duplicate_count}")
+
+        if DEDUP_ENABLED:
+            print(f"Дублей пропущено: {duplicate_count}")
 
     else:
         if DEDUP_ENABLED:
             save_sent_db(sent_db)
 
-        print(
-            f"Проверка завершена. "
-            f"Режим: {SEARCH_MODE}. "
-            f"Проверено маршрутов: {checked_count}. "
-            f"Новых билетов ниже лимитов нет. "
-            f"Дублей пропущено: {duplicate_count}."
-        )
+            print(
+                f"Проверка завершена. "
+                f"Режим: {SEARCH_MODE}. "
+                f"Проверено маршрутов: {checked_count}. "
+                f"Новых билетов ниже лимитов нет. "
+                f"Дублей пропущено: {duplicate_count}."
+            )
+        else:
+            print(
+                f"Проверка завершена. "
+                f"Режим: {SEARCH_MODE}. "
+                f"Проверено маршрутов: {checked_count}. "
+                f"Новых билетов ниже лимитов нет."
+            )
 
 
 if __name__ == "__main__":
