@@ -14,6 +14,20 @@
       "transfers": 0,
       "flight_number": "452",
       "direct_only": true
+    },
+    "hubs|SVX|HAN|2026-09-04T04:55:00+05:00|2|408|any|https://www.aviasales.ru/search/SVX0409HAN1": {
+      "first_seen": "2026-07-07T22:45:37.041195+00:00",
+      "last_sent": "2026-07-07T22:45:37.041211+00:00",
+      "mode": "hubs",
+      "origin": "SVX",
+      "destination": "HAN",
+      "month": "2026-09",
+      "best_price": 22376,
+      "last_price": 22376,
+      "departure_at": "2026-09-04T04:55:00+05:00",
+      "transfers": 2,
+      "flight_number": "408",
+      "direct_only": false
     }
   }
 }
