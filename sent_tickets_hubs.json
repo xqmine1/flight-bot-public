@@ -504,6 +504,20 @@
       "transfers": 2,
       "flight_number": "6544",
       "direct_only": false
+    },
+    "beach|SVX|BKK|2026-10-11T06:35:00+05:00|2|404|any|https://www.aviasales.ru/search/SVX1110BKK1": {
+      "first_seen": "2026-07-08T04:51:24.915369+00:00",
+      "last_sent": "2026-07-08T04:51:24.915409+00:00",
+      "mode": "beach",
+      "origin": "SVX",
+      "destination": "BKK",
+      "month": "2026-10",
+      "best_price": 20002,
+      "last_price": 20002,
+      "departure_at": "2026-10-11T06:35:00+05:00",
+      "transfers": 2,
+      "flight_number": "404",
+      "direct_only": false
     }
   }
 }
