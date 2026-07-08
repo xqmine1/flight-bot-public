@@ -9,8 +9,10 @@ SEARCH_DAYS_AHEAD = 180
 
 # ====== АНТИДУБЛЬ ======
 
-# Антидубль используется только для режима hubs.
+# Антидубль используется для обоих режимов: beach и hubs.
 DEDUP_KEEP_DAYS = 30
+
+# Оставляем старое имя файла, чтобы не менять workflow.
 SENT_DB_FILENAME = "sent_tickets_hubs.json"
 
 
