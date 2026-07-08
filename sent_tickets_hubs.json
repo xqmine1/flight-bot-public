@@ -297,13 +297,13 @@
     },
     "beach|UFA|HKT|2026-08-22T07:00:00+05:00|2|436|any|https://www.aviasales.ru/search/UFA2208HKT1": {
       "first_seen": "2026-07-08T04:41:22.276388+00:00",
-      "last_sent": "2026-07-08T04:41:22.276389+00:00",
+      "last_sent": "2026-07-08T13:41:22.087906+00:00",
       "mode": "beach",
       "origin": "UFA",
       "destination": "HKT",
       "month": "2026-08",
-      "best_price": 20628,
-      "last_price": 20628,
+      "best_price": 16841,
+      "last_price": 16841,
       "departure_at": "2026-08-22T07:00:00+05:00",
       "transfers": 2,
       "flight_number": "436",
@@ -1260,6 +1260,20 @@
       "transfers": 0,
       "flight_number": "9662",
       "direct_only": true
+    },
+    "beach|KZN|HKT|2026-09-03T18:15:00+03:00|2|60|any|https://www.aviasales.ru/search/KZN0309HKT1": {
+      "first_seen": "2026-07-08T13:41:22.087876+00:00",
+      "last_sent": "2026-07-08T13:41:22.087894+00:00",
+      "mode": "beach",
+      "origin": "KZN",
+      "destination": "HKT",
+      "month": "2026-09",
+      "best_price": 15891,
+      "last_price": 15891,
+      "departure_at": "2026-09-03T18:15:00+03:00",
+      "transfers": 2,
+      "flight_number": "60",
+      "direct_only": false
     }
   }
 }
