@@ -1022,6 +1022,20 @@
       "transfers": 2,
       "flight_number": "6860",
       "direct_only": false
+    },
+    "beach|SVX|HKT|2026-08-22T05:30:00+05:00|2|6544|any|https://www.aviasales.ru/search/SVX2208HKT1": {
+      "first_seen": "2026-07-08T08:21:11.385652+00:00",
+      "last_sent": "2026-07-08T08:21:11.385666+00:00",
+      "mode": "beach",
+      "origin": "SVX",
+      "destination": "HKT",
+      "month": "2026-08",
+      "best_price": 21693,
+      "last_price": 21693,
+      "departure_at": "2026-08-22T05:30:00+05:00",
+      "transfers": 2,
+      "flight_number": "6544",
+      "direct_only": false
     }
   }
 }
