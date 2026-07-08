@@ -1134,6 +1134,34 @@
       "transfers": 2,
       "flight_number": "436",
       "direct_only": false
+    },
+    "beach|SVX|HKT|2026-07-17T06:50:00+05:00|2|264|any|https://www.aviasales.ru/search/SVX1707HKT1": {
+      "first_seen": "2026-07-08T12:51:08.897044+00:00",
+      "last_sent": "2026-07-08T12:51:08.897062+00:00",
+      "mode": "beach",
+      "origin": "SVX",
+      "destination": "HKT",
+      "month": "2026-07",
+      "best_price": 23741,
+      "last_price": 23741,
+      "departure_at": "2026-07-17T06:50:00+05:00",
+      "transfers": 2,
+      "flight_number": "264",
+      "direct_only": false
+    },
+    "beach|KZN|BKK|2026-07-20T21:50:00+03:00|2|6842|any|https://www.aviasales.ru/search/KZN2007BKK1": {
+      "first_seen": "2026-07-08T12:51:08.897071+00:00",
+      "last_sent": "2026-07-08T12:51:08.897073+00:00",
+      "mode": "beach",
+      "origin": "KZN",
+      "destination": "BKK",
+      "month": "2026-07",
+      "best_price": 12645,
+      "last_price": 12645,
+      "departure_at": "2026-07-20T21:50:00+03:00",
+      "transfers": 2,
+      "flight_number": "6842",
+      "direct_only": false
     }
   }
 }
