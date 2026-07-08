@@ -56,6 +56,20 @@
       "transfers": 0,
       "flight_number": "9662",
       "direct_only": true
+    },
+    "hubs|SVX|TAS|2026-11-21T12:00:00+05:00||9662|direct|https://www.aviasales.ru/search/SVX2111TAS1": {
+      "first_seen": "2026-07-08T04:35:37.991479+00:00",
+      "last_sent": "2026-07-08T04:35:37.991493+00:00",
+      "mode": "hubs",
+      "origin": "SVX",
+      "destination": "TAS",
+      "month": "2026-11",
+      "best_price": 7110,
+      "last_price": 7110,
+      "departure_at": "2026-11-21T12:00:00+05:00",
+      "transfers": 0,
+      "flight_number": "9662",
+      "direct_only": true
     }
   }
 }
