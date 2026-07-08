@@ -532,6 +532,62 @@
       "transfers": 2,
       "flight_number": "6544",
       "direct_only": false
+    },
+    "beach|SVX|HKT|2026-07-21T08:15:00+05:00|2|262|any|https://www.aviasales.ru/search/SVX2107HKT1": {
+      "first_seen": "2026-07-08T05:31:30.882512+00:00",
+      "last_sent": "2026-07-08T05:31:30.882525+00:00",
+      "mode": "beach",
+      "origin": "SVX",
+      "destination": "HKT",
+      "month": "2026-07",
+      "best_price": 17727,
+      "last_price": 17727,
+      "departure_at": "2026-07-21T08:15:00+05:00",
+      "transfers": 2,
+      "flight_number": "262",
+      "direct_only": false
+    },
+    "beach|SVX|HKT|2026-08-17T05:30:00+05:00|2|6544|any|https://www.aviasales.ru/search/SVX1708HKT1": {
+      "first_seen": "2026-07-08T05:31:30.882531+00:00",
+      "last_sent": "2026-07-08T05:31:30.882533+00:00",
+      "mode": "beach",
+      "origin": "SVX",
+      "destination": "HKT",
+      "month": "2026-08",
+      "best_price": 17833,
+      "last_price": 17833,
+      "departure_at": "2026-08-17T05:30:00+05:00",
+      "transfers": 2,
+      "flight_number": "6544",
+      "direct_only": false
+    },
+    "beach|SVX|BKK|2026-08-08T04:55:00+05:00|2|408|any|https://www.aviasales.ru/search/SVX0808BKK1": {
+      "first_seen": "2026-07-08T05:31:30.882536+00:00",
+      "last_sent": "2026-07-08T05:31:30.882537+00:00",
+      "mode": "beach",
+      "origin": "SVX",
+      "destination": "BKK",
+      "month": "2026-08",
+      "best_price": 18298,
+      "last_price": 18298,
+      "departure_at": "2026-08-08T04:55:00+05:00",
+      "transfers": 2,
+      "flight_number": "408",
+      "direct_only": false
+    },
+    "beach|KZN|HKT|2026-07-30T18:15:00+03:00|2|60|any|https://www.aviasales.ru/search/KZN3007HKT1": {
+      "first_seen": "2026-07-08T05:31:30.882539+00:00",
+      "last_sent": "2026-07-08T05:31:30.882542+00:00",
+      "mode": "beach",
+      "origin": "KZN",
+      "destination": "HKT",
+      "month": "2026-07",
+      "best_price": 13955,
+      "last_price": 13955,
+      "departure_at": "2026-07-30T18:15:00+03:00",
+      "transfers": 2,
+      "flight_number": "60",
+      "direct_only": false
     }
   }
 }
