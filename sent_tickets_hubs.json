@@ -381,13 +381,13 @@
     },
     "beach|TJM|BKK|2026-07-21T05:30:00+05:00|2|6562|any|https://www.aviasales.ru/search/TJM2107BKK1": {
       "first_seen": "2026-07-08T04:41:22.276414+00:00",
-      "last_sent": "2026-07-08T12:11:31.493868+00:00",
+      "last_sent": "2026-07-08T13:21:26.385360+00:00",
       "mode": "beach",
       "origin": "TJM",
       "destination": "BKK",
       "month": "2026-07",
-      "best_price": 20111,
-      "last_price": 20111,
+      "best_price": 18933,
+      "last_price": 18933,
       "departure_at": "2026-07-21T05:30:00+05:00",
       "transfers": 2,
       "flight_number": "6562",
@@ -1217,6 +1217,34 @@
       "departure_at": "2026-07-21T19:25:00+05:00",
       "transfers": 2,
       "flight_number": "6570",
+      "direct_only": false
+    },
+    "beach|KZN|BKK|2026-07-20T23:10:00+03:00|2|6860|any|https://www.aviasales.ru/search/KZN2007BKK1": {
+      "first_seen": "2026-07-08T13:21:26.385328+00:00",
+      "last_sent": "2026-07-08T13:21:26.385343+00:00",
+      "mode": "beach",
+      "origin": "KZN",
+      "destination": "BKK",
+      "month": "2026-07",
+      "best_price": 14553,
+      "last_price": 14553,
+      "departure_at": "2026-07-20T23:10:00+03:00",
+      "transfers": 2,
+      "flight_number": "6860",
+      "direct_only": false
+    },
+    "beach|UFA|HKT|2026-08-22T15:55:00+05:00|2|6502|any|https://www.aviasales.ru/search/UFA2208HKT1": {
+      "first_seen": "2026-07-08T13:21:26.385349+00:00",
+      "last_sent": "2026-07-08T13:21:26.385351+00:00",
+      "mode": "beach",
+      "origin": "UFA",
+      "destination": "HKT",
+      "month": "2026-08",
+      "best_price": 15581,
+      "last_price": 15581,
+      "departure_at": "2026-08-22T15:55:00+05:00",
+      "transfers": 2,
+      "flight_number": "6502",
       "direct_only": false
     }
   }
