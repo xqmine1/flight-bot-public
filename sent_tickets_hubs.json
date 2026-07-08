@@ -826,6 +826,48 @@
       "transfers": 2,
       "flight_number": "404",
       "direct_only": false
+    },
+    "beach|SVX|HKT|2026-07-30T04:55:00+05:00|2|408|any|https://www.aviasales.ru/search/SVX3007HKT1": {
+      "first_seen": "2026-07-08T07:41:29.434987+00:00",
+      "last_sent": "2026-07-08T07:41:29.434997+00:00",
+      "mode": "beach",
+      "origin": "SVX",
+      "destination": "HKT",
+      "month": "2026-07",
+      "best_price": 17743,
+      "last_price": 17743,
+      "departure_at": "2026-07-30T04:55:00+05:00",
+      "transfers": 2,
+      "flight_number": "408",
+      "direct_only": false
+    },
+    "beach|SVX|HKT|2026-12-09T00:30:00+05:00|2|9662|any|https://www.aviasales.ru/search/SVX0912HKT1": {
+      "first_seen": "2026-07-08T07:41:29.435010+00:00",
+      "last_sent": "2026-07-08T07:41:29.435012+00:00",
+      "mode": "beach",
+      "origin": "SVX",
+      "destination": "HKT",
+      "month": "2026-12",
+      "best_price": 22968,
+      "last_price": 22968,
+      "departure_at": "2026-12-09T00:30:00+05:00",
+      "transfers": 2,
+      "flight_number": "9662",
+      "direct_only": false
+    },
+    "beach|UFA|HKT|2026-08-23T08:00:00+05:00|2|364|any|https://www.aviasales.ru/search/UFA2308HKT1": {
+      "first_seen": "2026-07-08T07:41:29.435016+00:00",
+      "last_sent": "2026-07-08T07:41:29.435017+00:00",
+      "mode": "beach",
+      "origin": "UFA",
+      "destination": "HKT",
+      "month": "2026-08",
+      "best_price": 18867,
+      "last_price": 18867,
+      "departure_at": "2026-08-23T08:00:00+05:00",
+      "transfers": 2,
+      "flight_number": "364",
+      "direct_only": false
     }
   }
 }
