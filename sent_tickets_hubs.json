@@ -42,6 +42,20 @@
       "transfers": 2,
       "flight_number": "408",
       "direct_only": false
+    },
+    "hubs|SVX|TAS|2026-07-11T12:00:00+05:00||9662|direct|https://www.aviasales.ru/search/SVX1107TAS1": {
+      "first_seen": "2026-07-08T04:05:33.251305+00:00",
+      "last_sent": "2026-07-08T04:05:33.251319+00:00",
+      "mode": "hubs",
+      "origin": "SVX",
+      "destination": "TAS",
+      "month": "2026-07",
+      "best_price": 8312,
+      "last_price": 8312,
+      "departure_at": "2026-07-11T12:00:00+05:00",
+      "transfers": 0,
+      "flight_number": "9662",
+      "direct_only": true
     }
   }
 }
