@@ -1,6 +1,7 @@
 import os
 import html
 import json
+import time
 import requests
 from pathlib import Path
 from datetime import datetime, timezone, timedelta, date
@@ -46,9 +47,8 @@ if not TRAVELPAYOUTS_TOKEN:
 # hubs — хабы
 SEARCH_MODE = (os.getenv("SEARCH_MODE") or "beach").lower().strip()
 
-# Антидубль включён только для hubs.
-# Для beach он вообще не используется.
-DEDUP_ENABLED = SEARCH_MODE == "hubs"
+# Антидубль включён для обоих режимов.
+DEDUP_ENABLED = SEARCH_MODE in ["beach", "hubs"]
 
 SENT_DB_PATH = Path(SENT_DB_FILENAME)
 
@@ -218,31 +218,50 @@ def get_flight_prices(origin: str, destination: str, month: str, direct_only: bo
         "token": TRAVELPAYOUTS_TOKEN,
     }
 
-    response = requests.get(url, params=params, timeout=30)
-
     direct_text = "direct only" if direct_only else "with transfers"
+
+    for attempt in range(1, 4):
+        try:
+            response = requests.get(url, params=params, timeout=30)
+
+            print(
+                f"{origin} → {destination}, {month}: "
+                f"status {response.status_code}, {direct_text}, attempt {attempt}"
+            )
+
+            if response.status_code != 200:
+                print(
+                    f"Ошибка API по маршруту {origin} → {destination}, {month}: "
+                    f"{response.text[:300]}"
+                )
+                return []
+
+            data = response.json()
+
+            if not data.get("success"):
+                print(
+                    f"Travelpayouts вернул ошибку по маршруту "
+                    f"{origin} → {destination}, {month}: {data}"
+                )
+                return []
+
+            return data.get("data", [])
+
+        except requests.exceptions.RequestException as error:
+            print(
+                f"Сетевая ошибка по маршруту {origin} → {destination}, {month}. "
+                f"Попытка {attempt}/3: {error}"
+            )
+
+            if attempt < 3:
+                time.sleep(5)
+
     print(
         f"{origin} → {destination}, {month}: "
-        f"status {response.status_code}, {direct_text}"
+        f"маршрут пропущен после 3 неудачных попыток"
     )
 
-    if response.status_code != 200:
-        print(
-            f"Ошибка API по маршруту {origin} → {destination}, {month}: "
-            f"{response.text[:300]}"
-        )
-        return []
-
-    data = response.json()
-
-    if not data.get("success"):
-        print(
-            f"Travelpayouts вернул ошибку по маршруту "
-            f"{origin} → {destination}, {month}: {data}"
-        )
-        return []
-
-    return data.get("data", [])
+    return []
 
 
 # ====== ФОРМАТИРОВАНИЕ ======
@@ -323,7 +342,7 @@ def make_compact_link(link: str) -> str:
     return link.split("?")[0]
 
 
-# ====== АНТИДУБЛЬ ТОЛЬКО ДЛЯ HUBS ======
+# ====== АНТИДУБЛЬ ======
 
 def now_iso():
     return datetime.now(timezone.utc).isoformat()
@@ -390,7 +409,7 @@ def cleanup_sent_db(sent_db: dict):
 
 def make_ticket_stable_key(route: dict, ticket: dict):
     """
-    Стабильный ключ билета для антидубля hubs.
+    Стабильный ключ билета для антидубля.
 
     Цена НЕ включается в ключ.
     Поэтому если тот же билет станет дешевле, бот пришлёт его снова.
@@ -420,7 +439,7 @@ def make_ticket_stable_key(route: dict, ticket: dict):
     return "|".join(key_parts)
 
 
-def should_skip_hub_ticket(sent_db: dict, ticket_key: str, ticket: dict):
+def should_skip_ticket(sent_db: dict, ticket_key: str, ticket: dict):
     """
     True — билет уже был отправлен и не стал дешевле.
     False — билет новый или стал дешевле.
@@ -445,7 +464,7 @@ def should_skip_hub_ticket(sent_db: dict, ticket_key: str, ticket: dict):
     return True
 
 
-def mark_hub_tickets_as_sent(sent_db: dict, sent_records: list):
+def mark_tickets_as_sent(sent_db: dict, sent_records: list):
     items = sent_db.setdefault("items", {})
 
     for record in sent_records:
@@ -693,9 +712,6 @@ def main():
 
     sent_db = None
 
-    # Важно:
-    # Для beach этот блок не выполняется.
-    # Антидубль загружается только для hubs.
     if DEDUP_ENABLED:
         sent_db = load_sent_db()
         cleanup_sent_db(sent_db)
@@ -762,11 +778,12 @@ def main():
             if DEDUP_ENABLED:
                 ticket_key = make_ticket_stable_key(route, cheapest)
 
-                if should_skip_hub_ticket(sent_db, ticket_key, cheapest):
+                if should_skip_ticket(sent_db, ticket_key, cheapest):
                     duplicate_count += 1
                     print(
                         f"{origin} → {destination}, {month}: "
-                        f"дубль для hubs, уже отправлялся за последние {DEDUP_KEEP_DAYS} дней"
+                        f"дубль для {SEARCH_MODE}, уже отправлялся "
+                        f"за последние {DEDUP_KEEP_DAYS} дней"
                     )
                     continue
 
@@ -797,32 +814,23 @@ def main():
         send_long_telegram_message(message)
 
         if DEDUP_ENABLED:
-            mark_hub_tickets_as_sent(sent_db, pending_sent_records)
+            mark_tickets_as_sent(sent_db, pending_sent_records)
             save_sent_db(sent_db)
 
         print(f"Отправлено новых находок: {found_count}")
-
-        if DEDUP_ENABLED:
-            print(f"Дублей пропущено: {duplicate_count}")
+        print(f"Дублей пропущено: {duplicate_count}")
 
     else:
         if DEDUP_ENABLED:
             save_sent_db(sent_db)
 
-            print(
-                f"Проверка завершена. "
-                f"Режим: {SEARCH_MODE}. "
-                f"Проверено маршрутов: {checked_count}. "
-                f"Новых билетов ниже лимитов нет. "
-                f"Дублей пропущено: {duplicate_count}."
-            )
-        else:
-            print(
-                f"Проверка завершена. "
-                f"Режим: {SEARCH_MODE}. "
-                f"Проверено маршрутов: {checked_count}. "
-                f"Новых билетов ниже лимитов нет."
-            )
+        print(
+            f"Проверка завершена. "
+            f"Режим: {SEARCH_MODE}. "
+            f"Проверено маршрутов: {checked_count}. "
+            f"Новых билетов ниже лимитов нет. "
+            f"Дублей пропущено: {duplicate_count}."
+        )
 
 
 if __name__ == "__main__":
