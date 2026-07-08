@@ -1162,6 +1162,62 @@
       "transfers": 2,
       "flight_number": "6842",
       "direct_only": false
+    },
+    "beach|KZN|HKT|2026-09-08T11:50:00+03:00|2|60|any|https://www.aviasales.ru/search/KZN0809HKT1": {
+      "first_seen": "2026-07-08T13:11:19.482089+00:00",
+      "last_sent": "2026-07-08T13:11:19.482105+00:00",
+      "mode": "beach",
+      "origin": "KZN",
+      "destination": "HKT",
+      "month": "2026-09",
+      "best_price": 19178,
+      "last_price": 19178,
+      "departure_at": "2026-09-08T11:50:00+03:00",
+      "transfers": 2,
+      "flight_number": "60",
+      "direct_only": false
+    },
+    "beach|KZN|BKK|2026-08-12T21:50:00+03:00|2|6842|any|https://www.aviasales.ru/search/KZN1208BKK1": {
+      "first_seen": "2026-07-08T13:11:19.482113+00:00",
+      "last_sent": "2026-07-08T13:11:19.482115+00:00",
+      "mode": "beach",
+      "origin": "KZN",
+      "destination": "BKK",
+      "month": "2026-08",
+      "best_price": 19565,
+      "last_price": 19565,
+      "departure_at": "2026-08-12T21:50:00+03:00",
+      "transfers": 2,
+      "flight_number": "6842",
+      "direct_only": false
+    },
+    "beach|UFA|HKT|2026-10-02T05:55:00+05:00|2|6502|any|https://www.aviasales.ru/search/UFA0210HKT1": {
+      "first_seen": "2026-07-08T13:11:19.482119+00:00",
+      "last_sent": "2026-07-08T13:11:19.482121+00:00",
+      "mode": "beach",
+      "origin": "UFA",
+      "destination": "HKT",
+      "month": "2026-10",
+      "best_price": 20939,
+      "last_price": 20939,
+      "departure_at": "2026-10-02T05:55:00+05:00",
+      "transfers": 2,
+      "flight_number": "6502",
+      "direct_only": false
+    },
+    "beach|CEK|MLE|2026-07-21T19:25:00+05:00|2|6570|any|https://www.aviasales.ru/search/CEK2107MLE1": {
+      "first_seen": "2026-07-08T13:11:19.482312+00:00",
+      "last_sent": "2026-07-08T13:11:19.482316+00:00",
+      "mode": "beach",
+      "origin": "CEK",
+      "destination": "MLE",
+      "month": "2026-07",
+      "best_price": 24076,
+      "last_price": 24076,
+      "departure_at": "2026-07-21T19:25:00+05:00",
+      "transfers": 2,
+      "flight_number": "6570",
+      "direct_only": false
     }
   }
 }
