@@ -700,6 +700,20 @@
       "transfers": 2,
       "flight_number": "436",
       "direct_only": false
+    },
+    "beach|KZN|HKT|2026-07-30T22:35:00+03:00|2|5844|any|https://www.aviasales.ru/search/KZN3007HKT1": {
+      "first_seen": "2026-07-08T07:01:46.503986+00:00",
+      "last_sent": "2026-07-08T07:01:46.504001+00:00",
+      "mode": "beach",
+      "origin": "KZN",
+      "destination": "HKT",
+      "month": "2026-07",
+      "best_price": 17617,
+      "last_price": 17617,
+      "departure_at": "2026-07-30T22:35:00+03:00",
+      "transfers": 2,
+      "flight_number": "5844",
+      "direct_only": false
     }
   }
 }
