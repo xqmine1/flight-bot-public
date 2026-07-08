@@ -714,6 +714,34 @@
       "transfers": 2,
       "flight_number": "5844",
       "direct_only": false
+    },
+    "beach|KZN|HKT|2026-07-26T22:25:00+03:00|2|228|any|https://www.aviasales.ru/search/KZN2607HKT1": {
+      "first_seen": "2026-07-08T07:11:27.719233+00:00",
+      "last_sent": "2026-07-08T07:11:27.719248+00:00",
+      "mode": "beach",
+      "origin": "KZN",
+      "destination": "HKT",
+      "month": "2026-07",
+      "best_price": 16992,
+      "last_price": 16992,
+      "departure_at": "2026-07-26T22:25:00+03:00",
+      "transfers": 2,
+      "flight_number": "228",
+      "direct_only": false
+    },
+    "beach|KZN|BKK|2026-07-26T22:25:00+03:00|2|228|any|https://www.aviasales.ru/search/KZN2607BKK1": {
+      "first_seen": "2026-07-08T07:11:27.719255+00:00",
+      "last_sent": "2026-07-08T07:11:27.719256+00:00",
+      "mode": "beach",
+      "origin": "KZN",
+      "destination": "BKK",
+      "month": "2026-07",
+      "best_price": 16810,
+      "last_price": 16810,
+      "departure_at": "2026-07-26T22:25:00+03:00",
+      "transfers": 2,
+      "flight_number": "228",
+      "direct_only": false
     }
   }
 }
