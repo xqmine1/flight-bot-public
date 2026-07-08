@@ -868,6 +868,20 @@
       "transfers": 2,
       "flight_number": "364",
       "direct_only": false
+    },
+    "beach|SVX|HKT|2026-09-07T20:30:00+05:00|2|270|any|https://www.aviasales.ru/search/SVX0709HKT1": {
+      "first_seen": "2026-07-08T07:51:24.280043+00:00",
+      "last_sent": "2026-07-08T07:51:24.280056+00:00",
+      "mode": "beach",
+      "origin": "SVX",
+      "destination": "HKT",
+      "month": "2026-09",
+      "best_price": 17282,
+      "last_price": 17282,
+      "departure_at": "2026-09-07T20:30:00+05:00",
+      "transfers": 2,
+      "flight_number": "270",
+      "direct_only": false
     }
   }
 }
