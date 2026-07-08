@@ -1386,6 +1386,20 @@
       "transfers": 2,
       "flight_number": "60",
       "direct_only": false
+    },
+    "beach|UFA|HKT|2026-09-07T15:55:00+05:00|2|6502|any|https://www.aviasales.ru/search/UFA0709HKT1": {
+      "first_seen": "2026-07-08T18:11:34.141588+00:00",
+      "last_sent": "2026-07-08T18:11:34.141604+00:00",
+      "mode": "beach",
+      "origin": "UFA",
+      "destination": "HKT",
+      "month": "2026-09",
+      "best_price": 20700,
+      "last_price": 20700,
+      "departure_at": "2026-09-07T15:55:00+05:00",
+      "transfers": 2,
+      "flight_number": "6502",
+      "direct_only": false
     }
   }
 }
