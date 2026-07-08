@@ -490,6 +490,20 @@
       "transfers": 2,
       "flight_number": "6570",
       "direct_only": false
+    },
+    "hubs|SVX|HAN|2026-08-04T05:30:00+05:00|2|6544|any|https://www.aviasales.ru/search/SVX0408HAN1": {
+      "first_seen": "2026-07-08T04:45:36.807053+00:00",
+      "last_sent": "2026-07-08T04:45:36.807064+00:00",
+      "mode": "hubs",
+      "origin": "SVX",
+      "destination": "HAN",
+      "month": "2026-08",
+      "best_price": 19007,
+      "last_price": 19007,
+      "departure_at": "2026-08-04T05:30:00+05:00",
+      "transfers": 2,
+      "flight_number": "6544",
+      "direct_only": false
     }
   }
 }
