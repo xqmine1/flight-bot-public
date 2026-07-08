@@ -353,13 +353,13 @@
     },
     "beach|UFA|BKK|2026-08-05T05:55:00+05:00|2|6502|any|https://www.aviasales.ru/search/UFA0508BKK1": {
       "first_seen": "2026-07-08T04:41:22.276405+00:00",
-      "last_sent": "2026-07-08T04:41:22.276407+00:00",
+      "last_sent": "2026-07-08T07:21:11.146991+00:00",
       "mode": "beach",
       "origin": "UFA",
       "destination": "BKK",
       "month": "2026-08",
-      "best_price": 18450,
-      "last_price": 18450,
+      "best_price": 17267,
+      "last_price": 17267,
       "departure_at": "2026-08-05T05:55:00+05:00",
       "transfers": 2,
       "flight_number": "6502",
@@ -741,6 +741,34 @@
       "departure_at": "2026-07-26T22:25:00+03:00",
       "transfers": 2,
       "flight_number": "228",
+      "direct_only": false
+    },
+    "beach|SVX|HKT|2026-10-10T18:10:00+05:00|2|404|any|https://www.aviasales.ru/search/SVX1010HKT1": {
+      "first_seen": "2026-07-08T07:21:11.146968+00:00",
+      "last_sent": "2026-07-08T07:21:11.146976+00:00",
+      "mode": "beach",
+      "origin": "SVX",
+      "destination": "HKT",
+      "month": "2026-10",
+      "best_price": 23617,
+      "last_price": 23617,
+      "departure_at": "2026-10-10T18:10:00+05:00",
+      "transfers": 2,
+      "flight_number": "404",
+      "direct_only": false
+    },
+    "beach|SVX|BKK|2026-07-26T06:05:00+05:00|2|6542|any|https://www.aviasales.ru/search/SVX2607BKK1": {
+      "first_seen": "2026-07-08T07:21:11.146982+00:00",
+      "last_sent": "2026-07-08T07:21:11.146983+00:00",
+      "mode": "beach",
+      "origin": "SVX",
+      "destination": "BKK",
+      "month": "2026-07",
+      "best_price": 18646,
+      "last_price": 18646,
+      "departure_at": "2026-07-26T06:05:00+05:00",
+      "transfers": 2,
+      "flight_number": "6542",
       "direct_only": false
     }
   }
