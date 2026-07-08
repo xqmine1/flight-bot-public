@@ -770,6 +770,48 @@
       "transfers": 2,
       "flight_number": "6542",
       "direct_only": false
+    },
+    "beach|SVX|CMB|2026-10-05T16:00:00+05:00|2|300|any|https://www.aviasales.ru/search/SVX0510CMB1": {
+      "first_seen": "2026-07-08T07:31:21.613554+00:00",
+      "last_sent": "2026-07-08T07:31:21.613566+00:00",
+      "mode": "beach",
+      "origin": "SVX",
+      "destination": "CMB",
+      "month": "2026-10",
+      "best_price": 23246,
+      "last_price": 23246,
+      "departure_at": "2026-10-05T16:00:00+05:00",
+      "transfers": 2,
+      "flight_number": "300",
+      "direct_only": false
+    },
+    "beach|KZN|HKT|2026-11-16T11:10:00+03:00|2|60|any|https://www.aviasales.ru/search/KZN1611HKT1": {
+      "first_seen": "2026-07-08T07:31:21.613573+00:00",
+      "last_sent": "2026-07-08T07:31:21.613575+00:00",
+      "mode": "beach",
+      "origin": "KZN",
+      "destination": "HKT",
+      "month": "2026-11",
+      "best_price": 24243,
+      "last_price": 24243,
+      "departure_at": "2026-11-16T11:10:00+03:00",
+      "transfers": 2,
+      "flight_number": "60",
+      "direct_only": false
+    },
+    "beach|UFA|BKK|2026-09-09T21:20:00+05:00|2|1138|any|https://www.aviasales.ru/search/UFA0909BKK1": {
+      "first_seen": "2026-07-08T07:31:21.613579+00:00",
+      "last_sent": "2026-07-08T07:31:21.613580+00:00",
+      "mode": "beach",
+      "origin": "UFA",
+      "destination": "BKK",
+      "month": "2026-09",
+      "best_price": 22327,
+      "last_price": 22327,
+      "departure_at": "2026-09-09T21:20:00+05:00",
+      "transfers": 2,
+      "flight_number": "1138",
+      "direct_only": false
     }
   }
 }
