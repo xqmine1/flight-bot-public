@@ -588,6 +588,20 @@
       "transfers": 2,
       "flight_number": "60",
       "direct_only": false
+    },
+    "beach|SVX|BKK|2026-07-26T05:30:00+05:00|2|6544|any|https://www.aviasales.ru/search/SVX2607BKK1": {
+      "first_seen": "2026-07-08T05:51:09.283370+00:00",
+      "last_sent": "2026-07-08T05:51:09.283386+00:00",
+      "mode": "beach",
+      "origin": "SVX",
+      "destination": "BKK",
+      "month": "2026-07",
+      "best_price": 18646,
+      "last_price": 18646,
+      "departure_at": "2026-07-26T05:30:00+05:00",
+      "transfers": 2,
+      "flight_number": "6544",
+      "direct_only": false
     }
   }
 }
