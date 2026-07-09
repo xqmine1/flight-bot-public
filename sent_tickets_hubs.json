@@ -1400,6 +1400,20 @@
       "transfers": 2,
       "flight_number": "6502",
       "direct_only": false
+    },
+    "beach|PEE|HKT|2026-08-14T18:55:00+05:00|2|6512|any|https://www.aviasales.ru/search/PEE1408HKT1": {
+      "first_seen": "2026-07-09T01:01:44.719787+00:00",
+      "last_sent": "2026-07-09T01:01:44.719798+00:00",
+      "mode": "beach",
+      "origin": "PEE",
+      "destination": "HKT",
+      "month": "2026-08",
+      "best_price": 23090,
+      "last_price": 23090,
+      "departure_at": "2026-08-14T18:55:00+05:00",
+      "transfers": 2,
+      "flight_number": "6512",
+      "direct_only": false
     }
   }
 }
