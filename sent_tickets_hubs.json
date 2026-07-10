@@ -3,13 +3,13 @@
   "items": {
     "hubs|SVX|SCO|2026-09-27T08:30:00+05:00||452|direct|https://www.aviasales.ru/search/SVX2709SCO1": {
       "first_seen": "2026-06-29T09:29:44.427072+00:00",
-      "last_sent": "2026-07-10T07:55:34.462898+00:00",
+      "last_sent": "2026-07-10T08:55:38.513334+00:00",
       "mode": "hubs",
       "origin": "SVX",
       "destination": "SCO",
       "month": "2026-09",
-      "best_price": 5068,
-      "last_price": 5068,
+      "best_price": 5044,
+      "last_price": 5044,
       "departure_at": "2026-09-27T08:30:00+05:00",
       "transfers": 0,
       "flight_number": "452",
