@@ -1456,6 +1456,20 @@
       "transfers": 0,
       "flight_number": "3205",
       "direct_only": false
+    },
+    "hubs|SVX|SGN|2026-07-22T02:50:00+05:00|1|3205|any|https://www.aviasales.ru/search/SVX2207SGN1": {
+      "first_seen": "2026-07-21T12:15:39.271320+00:00",
+      "last_sent": "2026-07-21T12:15:39.271336+00:00",
+      "mode": "hubs",
+      "origin": "SVX",
+      "destination": "SGN",
+      "month": "2026-07",
+      "best_price": 23419,
+      "last_price": 23419,
+      "departure_at": "2026-07-22T02:50:00+05:00",
+      "transfers": 1,
+      "flight_number": "3205",
+      "direct_only": false
     }
   }
 }
