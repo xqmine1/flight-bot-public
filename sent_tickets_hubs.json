@@ -1624,6 +1624,20 @@
       "transfers": 0,
       "flight_number": "3205",
       "direct_only": false
+    },
+    "beach|SVX|MLE|2026-10-05T01:50:00+05:00|1|961|any|https://www.aviasales.ru/search/SVX0510MLE1": {
+      "first_seen": "2026-08-01T07:31:10.126126+00:00",
+      "last_sent": "2026-08-01T07:31:10.126138+00:00",
+      "mode": "beach",
+      "origin": "SVX",
+      "destination": "MLE",
+      "month": "2026-10",
+      "best_price": 24999,
+      "last_price": 24999,
+      "departure_at": "2026-10-05T01:50:00+05:00",
+      "transfers": 1,
+      "flight_number": "961",
+      "direct_only": false
     }
   }
 }
