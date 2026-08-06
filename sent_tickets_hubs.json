@@ -1,20 +1,6 @@
 {
   "version": 1,
   "items": {
-    "hubs|SVX|HAN|2026-09-20T04:55:00+05:00|2|408|any|https://www.aviasales.ru/search/SVX2009HAN1": {
-      "first_seen": "2026-07-07T22:55:32.364801+00:00",
-      "last_sent": "2026-07-07T22:55:32.364812+00:00",
-      "mode": "hubs",
-      "origin": "SVX",
-      "destination": "HAN",
-      "month": "2026-09",
-      "best_price": 21512,
-      "last_price": 21512,
-      "departure_at": "2026-09-20T04:55:00+05:00",
-      "transfers": 2,
-      "flight_number": "408",
-      "direct_only": false
-    },
     "hubs|SVX|TAS|2026-07-11T12:00:00+05:00||9662|direct|https://www.aviasales.ru/search/SVX1107TAS1": {
       "first_seen": "2026-07-08T04:05:33.251305+00:00",
       "last_sent": "2026-07-08T04:05:33.251319+00:00",
