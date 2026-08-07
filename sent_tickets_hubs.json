@@ -1,48 +1,6 @@
 {
   "version": 1,
   "items": {
-    "beach|KZN|HKT|2026-07-20T23:10:00+03:00|2|6860|any|https://www.aviasales.ru/search/KZN2007HKT1": {
-      "first_seen": "2026-07-08T14:01:41.950668+00:00",
-      "last_sent": "2026-07-08T14:01:41.950685+00:00",
-      "mode": "beach",
-      "origin": "KZN",
-      "destination": "HKT",
-      "month": "2026-07",
-      "best_price": 15843,
-      "last_price": 15843,
-      "departure_at": "2026-07-20T23:10:00+03:00",
-      "transfers": 2,
-      "flight_number": "6860",
-      "direct_only": false
-    },
-    "beach|UFA|HKT|2026-09-13T21:20:00+05:00|2|1138|any|https://www.aviasales.ru/search/UFA1309HKT1": {
-      "first_seen": "2026-07-08T14:01:41.950693+00:00",
-      "last_sent": "2026-07-08T16:11:16.215900+00:00",
-      "mode": "beach",
-      "origin": "UFA",
-      "destination": "HKT",
-      "month": "2026-09",
-      "best_price": 19671,
-      "last_price": 19671,
-      "departure_at": "2026-09-13T21:20:00+05:00",
-      "transfers": 2,
-      "flight_number": "1138",
-      "direct_only": false
-    },
-    "beach|PEE|BKK|2026-07-21T06:10:00+05:00|2|434|any|https://www.aviasales.ru/search/PEE2107BKK1": {
-      "first_seen": "2026-07-08T14:01:41.950710+00:00",
-      "last_sent": "2026-07-08T16:11:16.215935+00:00",
-      "mode": "beach",
-      "origin": "PEE",
-      "destination": "BKK",
-      "month": "2026-07",
-      "best_price": 16471,
-      "last_price": 16471,
-      "departure_at": "2026-07-21T06:10:00+05:00",
-      "transfers": 2,
-      "flight_number": "434",
-      "direct_only": false
-    },
     "beach|UFA|HKT|2026-08-21T23:25:00+05:00|2|1239|any|https://www.aviasales.ru/search/UFA2108HKT1": {
       "first_seen": "2026-07-08T14:21:12.822160+00:00",
       "last_sent": "2026-07-08T14:21:12.822177+00:00",
