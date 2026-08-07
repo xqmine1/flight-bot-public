@@ -1,20 +1,6 @@
 {
   "version": 1,
   "items": {
-    "beach|KZN|HKT|2026-08-08T21:35:00+03:00|2|538|any|https://www.aviasales.ru/search/KZN0808HKT1": {
-      "first_seen": "2026-07-08T08:41:25.061933+00:00",
-      "last_sent": "2026-07-08T12:11:31.493795+00:00",
-      "mode": "beach",
-      "origin": "KZN",
-      "destination": "HKT",
-      "month": "2026-08",
-      "best_price": 22372,
-      "last_price": 22372,
-      "departure_at": "2026-08-08T21:35:00+03:00",
-      "transfers": 2,
-      "flight_number": "538",
-      "direct_only": false
-    },
     "beach|SVX|BKK|2026-08-09T06:05:00+05:00|2|6542|any|https://www.aviasales.ru/search/SVX0908BKK1": {
       "first_seen": "2026-07-08T09:31:39.950964+00:00",
       "last_sent": "2026-07-08T11:11:26.226249+00:00",
