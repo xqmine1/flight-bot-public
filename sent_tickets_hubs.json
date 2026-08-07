@@ -1,20 +1,6 @@
 {
   "version": 1,
   "items": {
-    "beach|PEE|HKT|2026-09-08T05:20:00+05:00|2|6512|any|https://www.aviasales.ru/search/PEE0809HKT1": {
-      "first_seen": "2026-07-08T13:51:18.256220+00:00",
-      "last_sent": "2026-07-08T16:11:16.215926+00:00",
-      "mode": "beach",
-      "origin": "PEE",
-      "destination": "HKT",
-      "month": "2026-09",
-      "best_price": 20180,
-      "last_price": 20180,
-      "departure_at": "2026-09-08T05:20:00+05:00",
-      "transfers": 2,
-      "flight_number": "6512",
-      "direct_only": false
-    },
     "beach|KZN|HKT|2026-07-20T23:10:00+03:00|2|6860|any|https://www.aviasales.ru/search/KZN2007HKT1": {
       "first_seen": "2026-07-08T14:01:41.950668+00:00",
       "last_sent": "2026-07-08T14:01:41.950685+00:00",
