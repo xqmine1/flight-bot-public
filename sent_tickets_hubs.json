@@ -1,62 +1,6 @@
 {
   "version": 1,
   "items": {
-    "beach|SVX|HKT|2026-07-20T20:30:00+05:00|2|270|any|https://www.aviasales.ru/search/SVX2007HKT1": {
-      "first_seen": "2026-07-08T08:11:09.668837+00:00",
-      "last_sent": "2026-07-08T08:11:09.668853+00:00",
-      "mode": "beach",
-      "origin": "SVX",
-      "destination": "HKT",
-      "month": "2026-07",
-      "best_price": 22466,
-      "last_price": 22466,
-      "departure_at": "2026-07-20T20:30:00+05:00",
-      "transfers": 2,
-      "flight_number": "270",
-      "direct_only": false
-    },
-    "beach|SVX|HKT|2026-08-11T05:30:00+05:00|2|6544|any|https://www.aviasales.ru/search/SVX1108HKT1": {
-      "first_seen": "2026-07-08T08:11:09.668859+00:00",
-      "last_sent": "2026-07-08T08:11:09.668861+00:00",
-      "mode": "beach",
-      "origin": "SVX",
-      "destination": "HKT",
-      "month": "2026-08",
-      "best_price": 19731,
-      "last_price": 19731,
-      "departure_at": "2026-08-11T05:30:00+05:00",
-      "transfers": 2,
-      "flight_number": "6544",
-      "direct_only": false
-    },
-    "beach|KZN|HKT|2026-08-20T18:15:00+03:00|2|60|any|https://www.aviasales.ru/search/KZN2008HKT1": {
-      "first_seen": "2026-07-08T08:11:09.668885+00:00",
-      "last_sent": "2026-07-08T08:11:09.668887+00:00",
-      "mode": "beach",
-      "origin": "KZN",
-      "destination": "HKT",
-      "month": "2026-08",
-      "best_price": 21184,
-      "last_price": 21184,
-      "departure_at": "2026-08-20T18:15:00+03:00",
-      "transfers": 2,
-      "flight_number": "60",
-      "direct_only": false
-    },
-    "beach|KZN|BKK|2026-07-24T22:55:00+03:00|2|6860|any|https://www.aviasales.ru/search/KZN2407BKK1": {
-      "first_seen": "2026-07-08T08:11:09.668897+00:00",
-      "last_sent": "2026-07-08T08:11:09.668899+00:00",
-      "mode": "beach",
-      "origin": "KZN",
-      "destination": "BKK",
-      "month": "2026-07",
-      "best_price": 21593,
-      "last_price": 21593,
-      "departure_at": "2026-07-24T22:55:00+03:00",
-      "transfers": 2,
-      "flight_number": "6860",
-      "direct_only": false
-    },
     "beach|SVX|HKT|2026-08-22T05:30:00+05:00|2|6544|any|https://www.aviasales.ru/search/SVX2208HKT1": {
       "first_seen": "2026-07-08T08:21:11.385652+00:00",
       "last_sent": "2026-07-08T08:21:11.385666+00:00",
