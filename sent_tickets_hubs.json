@@ -1,20 +1,6 @@
 {
   "version": 1,
   "items": {
-    "hubs|SVX|HAN|2026-09-04T06:35:00+05:00|2|404|any|https://www.aviasales.ru/search/SVX0409HAN1": {
-      "first_seen": "2026-07-08T07:35:39.346018+00:00",
-      "last_sent": "2026-07-08T12:05:44.509521+00:00",
-      "mode": "hubs",
-      "origin": "SVX",
-      "destination": "HAN",
-      "month": "2026-09",
-      "best_price": 22290,
-      "last_price": 22290,
-      "departure_at": "2026-09-04T06:35:00+05:00",
-      "transfers": 2,
-      "flight_number": "404",
-      "direct_only": false
-    },
     "beach|SVX|HKT|2026-07-30T04:55:00+05:00|2|408|any|https://www.aviasales.ru/search/SVX3007HKT1": {
       "first_seen": "2026-07-08T07:41:29.434987+00:00",
       "last_sent": "2026-07-08T07:41:29.434997+00:00",
