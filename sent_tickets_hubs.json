@@ -1,20 +1,6 @@
 {
   "version": 1,
   "items": {
-    "beach|SVX|BKK|2026-07-26T05:30:00+05:00|2|6544|any|https://www.aviasales.ru/search/SVX2607BKK1": {
-      "first_seen": "2026-07-08T05:51:09.283370+00:00",
-      "last_sent": "2026-07-08T06:11:16.069114+00:00",
-      "mode": "beach",
-      "origin": "SVX",
-      "destination": "BKK",
-      "month": "2026-07",
-      "best_price": 18645,
-      "last_price": 18645,
-      "departure_at": "2026-07-26T05:30:00+05:00",
-      "transfers": 2,
-      "flight_number": "6544",
-      "direct_only": false
-    },
     "beach|KZN|BKK|2026-11-01T21:35:00+03:00|2|6842|any|https://www.aviasales.ru/search/KZN0111BKK1": {
       "first_seen": "2026-07-08T06:01:31.225268+00:00",
       "last_sent": "2026-07-08T11:11:26.226298+00:00",
