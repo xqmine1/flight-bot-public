@@ -1,20 +1,6 @@
 {
   "version": 1,
   "items": {
-    "beach|UFA|HKT|2026-08-21T23:25:00+05:00|2|1239|any|https://www.aviasales.ru/search/UFA2108HKT1": {
-      "first_seen": "2026-07-08T14:21:12.822160+00:00",
-      "last_sent": "2026-07-08T14:21:12.822177+00:00",
-      "mode": "beach",
-      "origin": "UFA",
-      "destination": "HKT",
-      "month": "2026-08",
-      "best_price": 19135,
-      "last_price": 19135,
-      "departure_at": "2026-08-21T23:25:00+05:00",
-      "transfers": 2,
-      "flight_number": "1239",
-      "direct_only": false
-    },
     "beach|KZN|BKK|2026-07-21T11:50:00+03:00|2|60|any|https://www.aviasales.ru/search/KZN2107BKK1": {
       "first_seen": "2026-07-08T14:31:25.699020+00:00",
       "last_sent": "2026-07-08T15:11:17.177033+00:00",
