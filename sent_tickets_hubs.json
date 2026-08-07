@@ -1,20 +1,6 @@
 {
   "version": 1,
   "items": {
-    "beach|SVX|HKT|2026-08-22T05:30:00+05:00|2|6544|any|https://www.aviasales.ru/search/SVX2208HKT1": {
-      "first_seen": "2026-07-08T08:21:11.385652+00:00",
-      "last_sent": "2026-07-08T08:21:11.385666+00:00",
-      "mode": "beach",
-      "origin": "SVX",
-      "destination": "HKT",
-      "month": "2026-08",
-      "best_price": 21693,
-      "last_price": 21693,
-      "departure_at": "2026-08-22T05:30:00+05:00",
-      "transfers": 2,
-      "flight_number": "6544",
-      "direct_only": false
-    },
     "beach|KZN|HKT|2026-08-08T21:35:00+03:00|2|538|any|https://www.aviasales.ru/search/KZN0808HKT1": {
       "first_seen": "2026-07-08T08:41:25.061933+00:00",
       "last_sent": "2026-07-08T12:11:31.493795+00:00",
