@@ -1,34 +1,6 @@
 {
   "version": 1,
   "items": {
-    "beach|SVX|HKT|2026-10-10T18:10:00+05:00|2|404|any|https://www.aviasales.ru/search/SVX1010HKT1": {
-      "first_seen": "2026-07-08T07:21:11.146968+00:00",
-      "last_sent": "2026-07-08T12:11:31.493786+00:00",
-      "mode": "beach",
-      "origin": "SVX",
-      "destination": "HKT",
-      "month": "2026-10",
-      "best_price": 23526,
-      "last_price": 23526,
-      "departure_at": "2026-10-10T18:10:00+05:00",
-      "transfers": 2,
-      "flight_number": "404",
-      "direct_only": false
-    },
-    "beach|SVX|BKK|2026-07-26T06:05:00+05:00|2|6542|any|https://www.aviasales.ru/search/SVX2607BKK1": {
-      "first_seen": "2026-07-08T07:21:11.146982+00:00",
-      "last_sent": "2026-07-08T07:21:11.146983+00:00",
-      "mode": "beach",
-      "origin": "SVX",
-      "destination": "BKK",
-      "month": "2026-07",
-      "best_price": 18646,
-      "last_price": 18646,
-      "departure_at": "2026-07-26T06:05:00+05:00",
-      "transfers": 2,
-      "flight_number": "6542",
-      "direct_only": false
-    },
     "beach|SVX|CMB|2026-10-05T16:00:00+05:00|2|300|any|https://www.aviasales.ru/search/SVX0510CMB1": {
       "first_seen": "2026-07-08T07:31:21.613554+00:00",
       "last_sent": "2026-07-08T07:31:21.613566+00:00",
