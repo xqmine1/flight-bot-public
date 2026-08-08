@@ -1,20 +1,6 @@
 {
   "version": 1,
   "items": {
-    "beach|PEE|HKT|2026-08-14T18:55:00+05:00|2|6512|any|https://www.aviasales.ru/search/PEE1408HKT1": {
-      "first_seen": "2026-07-09T01:01:44.719787+00:00",
-      "last_sent": "2026-07-09T01:01:44.719798+00:00",
-      "mode": "beach",
-      "origin": "PEE",
-      "destination": "HKT",
-      "month": "2026-08",
-      "best_price": 23090,
-      "last_price": 23090,
-      "departure_at": "2026-08-14T18:55:00+05:00",
-      "transfers": 2,
-      "flight_number": "6512",
-      "direct_only": false
-    },
     "beach|SVX|HKT|2027-01-13T00:45:00+05:00|1|882|any|https://www.aviasales.ru/search/SVX1301HKT1": {
       "first_seen": "2026-07-17T02:21:11.338314+00:00",
       "last_sent": "2026-07-17T02:21:11.338329+00:00",
