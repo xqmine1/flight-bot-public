@@ -364,6 +364,20 @@
       "transfers": 1,
       "flight_number": "848",
       "direct_only": false
+    },
+    "hubs|SVX|TAS|2026-10-09T09:30:00+05:00||472|direct|https://www.aviasales.ru/search/SVX0910TAS1": {
+      "first_seen": "2026-08-12T15:55:38.288553+00:00",
+      "last_sent": "2026-08-12T15:55:38.288571+00:00",
+      "mode": "hubs",
+      "origin": "SVX",
+      "destination": "TAS",
+      "month": "2026-10",
+      "best_price": 9718,
+      "last_price": 9718,
+      "departure_at": "2026-10-09T09:30:00+05:00",
+      "transfers": 0,
+      "flight_number": "472",
+      "direct_only": true
     }
   }
 }
