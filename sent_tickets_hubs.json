@@ -1,20 +1,6 @@
 {
   "version": 1,
   "items": {
-    "beach|TJM|CXR|2026-07-23T21:35:00+05:00|1|806|any|https://www.aviasales.ru/search/TJM2307CXR1": {
-      "first_seen": "2026-07-22T08:50:54.748857+00:00",
-      "last_sent": "2026-07-22T08:50:54.748872+00:00",
-      "mode": "beach",
-      "origin": "TJM",
-      "destination": "CXR",
-      "month": "2026-07",
-      "best_price": 22149,
-      "last_price": 22149,
-      "departure_at": "2026-07-23T21:35:00+05:00",
-      "transfers": 1,
-      "flight_number": "806",
-      "direct_only": false
-    },
     "beach|TJM|CXR|2026-07-23T19:10:00+05:00||2559|any|https://www.aviasales.ru/search/TJM2307CXR1": {
       "first_seen": "2026-07-22T10:11:00.886000+00:00",
       "last_sent": "2026-07-22T10:41:08.942944+00:00",
