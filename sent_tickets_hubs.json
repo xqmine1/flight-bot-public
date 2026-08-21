@@ -1,20 +1,6 @@
 {
   "version": 1,
   "items": {
-    "beach|TJM|CXR|2026-07-23T19:10:00+05:00||2559|any|https://www.aviasales.ru/search/TJM2307CXR1": {
-      "first_seen": "2026-07-22T10:11:00.886000+00:00",
-      "last_sent": "2026-07-22T10:41:08.942944+00:00",
-      "mode": "beach",
-      "origin": "TJM",
-      "destination": "CXR",
-      "month": "2026-07",
-      "best_price": 22387,
-      "last_price": 22387,
-      "departure_at": "2026-07-23T19:10:00+05:00",
-      "transfers": 0,
-      "flight_number": "2559",
-      "direct_only": false
-    },
     "beach|KZN|BKK|2026-09-05T22:50:00+03:00|1|6242|any|https://www.aviasales.ru/search/KZN0509BKK1": {
       "first_seen": "2026-07-22T19:20:47.310652+00:00",
       "last_sent": "2026-07-22T19:20:47.310661+00:00",
