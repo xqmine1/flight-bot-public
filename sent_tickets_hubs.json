@@ -420,6 +420,20 @@
       "transfers": 0,
       "flight_number": "626",
       "direct_only": false
+    },
+    "beach|TJM|CXR|2026-08-27T21:35:00+05:00|1|806|any|https://www.aviasales.ru/search/TJM2708CXR1": {
+      "first_seen": "2026-08-26T13:21:21.747259+00:00",
+      "last_sent": "2026-08-26T13:21:21.747271+00:00",
+      "mode": "beach",
+      "origin": "TJM",
+      "destination": "CXR",
+      "month": "2026-08",
+      "best_price": 18819,
+      "last_price": 18819,
+      "departure_at": "2026-08-27T21:35:00+05:00",
+      "transfers": 1,
+      "flight_number": "806",
+      "direct_only": false
     }
   }
 }
