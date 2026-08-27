@@ -406,6 +406,20 @@
       "transfers": 1,
       "flight_number": "806",
       "direct_only": false
+    },
+    "beach|SVX|DAD|2026-08-27T16:15:00+05:00|1|1097|any|https://www.aviasales.ru/search/SVX2708DAD1": {
+      "first_seen": "2026-08-27T08:50:42.630426+00:00",
+      "last_sent": "2026-08-27T08:50:42.630442+00:00",
+      "mode": "beach",
+      "origin": "SVX",
+      "destination": "DAD",
+      "month": "2026-08",
+      "best_price": 24893,
+      "last_price": 24893,
+      "departure_at": "2026-08-27T16:15:00+05:00",
+      "transfers": 1,
+      "flight_number": "1097",
+      "direct_only": false
     }
   }
 }
