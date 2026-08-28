@@ -434,6 +434,20 @@
       "transfers": 0,
       "flight_number": "452",
       "direct_only": true
+    },
+    "beach|UFA|HKT|2027-02-22T15:40:00+05:00|1|476|any|https://www.aviasales.ru/search/UFA2202HKT1": {
+      "first_seen": "2026-08-28T16:31:05.706590+00:00",
+      "last_sent": "2026-08-28T16:31:05.706605+00:00",
+      "mode": "beach",
+      "origin": "UFA",
+      "destination": "HKT",
+      "month": "2027-02",
+      "best_price": 23316,
+      "last_price": 23316,
+      "departure_at": "2027-02-22T15:40:00+05:00",
+      "transfers": 1,
+      "flight_number": "476",
+      "direct_only": false
     }
   }
 }
