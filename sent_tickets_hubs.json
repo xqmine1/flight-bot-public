@@ -1,20 +1,6 @@
 {
   "version": 1,
   "items": {
-    "beach|KZN|BKK|2026-10-03T22:50:00+03:00|1|848|any|https://www.aviasales.ru/search/KZN0310BKK1": {
-      "first_seen": "2026-08-06T12:30:58.061671+00:00",
-      "last_sent": "2026-08-06T12:40:48.325425+00:00",
-      "mode": "beach",
-      "origin": "KZN",
-      "destination": "BKK",
-      "month": "2026-10",
-      "best_price": 24015,
-      "last_price": 24015,
-      "departure_at": "2026-10-03T22:50:00+03:00",
-      "transfers": 1,
-      "flight_number": "848",
-      "direct_only": false
-    },
     "beach|KZN|BKK|2026-10-19T22:50:00+03:00|1|848|any|https://www.aviasales.ru/search/KZN1910BKK1": {
       "first_seen": "2026-08-08T19:31:16.574720+00:00",
       "last_sent": "2026-08-08T20:01:00.239671+00:00",
