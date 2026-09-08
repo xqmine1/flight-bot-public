@@ -462,6 +462,20 @@
       "transfers": 1,
       "flight_number": "6844",
       "direct_only": false
+    },
+    "beach|SVX|MLE|2026-09-09T06:20:00+05:00|1|6542|any|https://www.aviasales.ru/search/SVX0909MLE1": {
+      "first_seen": "2026-09-08T21:20:52.094220+00:00",
+      "last_sent": "2026-09-08T21:20:52.094234+00:00",
+      "mode": "beach",
+      "origin": "SVX",
+      "destination": "MLE",
+      "month": "2026-09",
+      "best_price": 23757,
+      "last_price": 23757,
+      "departure_at": "2026-09-09T06:20:00+05:00",
+      "transfers": 1,
+      "flight_number": "6542",
+      "direct_only": false
     }
   }
 }
