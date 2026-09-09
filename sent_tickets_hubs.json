@@ -602,6 +602,20 @@
       "transfers": 1,
       "flight_number": "60",
       "direct_only": false
+    },
+    "beach|PEE|MLE|2026-09-09T18:35:00+05:00|1|6512|any|https://www.aviasales.ru/search/PEE0909MLE1": {
+      "first_seen": "2026-09-09T07:41:04.490371+00:00",
+      "last_sent": "2026-09-09T07:41:04.490386+00:00",
+      "mode": "beach",
+      "origin": "PEE",
+      "destination": "MLE",
+      "month": "2026-09",
+      "best_price": 24576,
+      "last_price": 24576,
+      "departure_at": "2026-09-09T18:35:00+05:00",
+      "transfers": 1,
+      "flight_number": "6512",
+      "direct_only": false
     }
   }
 }
