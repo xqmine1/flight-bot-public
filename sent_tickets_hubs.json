@@ -574,6 +574,20 @@
       "transfers": 1,
       "flight_number": "6842",
       "direct_only": false
+    },
+    "beach|KZN|HKT|2026-09-09T12:10:00+03:00|1|6844|any|https://www.aviasales.ru/search/KZN0909HKT1": {
+      "first_seen": "2026-09-09T07:01:05.679598+00:00",
+      "last_sent": "2026-09-09T07:01:05.679607+00:00",
+      "mode": "beach",
+      "origin": "KZN",
+      "destination": "HKT",
+      "month": "2026-09",
+      "best_price": 24808,
+      "last_price": 24808,
+      "departure_at": "2026-09-09T12:10:00+03:00",
+      "transfers": 1,
+      "flight_number": "6844",
+      "direct_only": false
     }
   }
 }
