@@ -714,6 +714,20 @@
       "transfers": 1,
       "flight_number": "228",
       "direct_only": false
+    },
+    "beach|KZN|MLE|2026-09-10T21:50:00+03:00|1|6842|any|https://www.aviasales.ru/search/KZN1009MLE1": {
+      "first_seen": "2026-09-10T12:11:03.375905+00:00",
+      "last_sent": "2026-09-10T12:11:03.375921+00:00",
+      "mode": "beach",
+      "origin": "KZN",
+      "destination": "MLE",
+      "month": "2026-09",
+      "best_price": 24133,
+      "last_price": 24133,
+      "departure_at": "2026-09-10T21:50:00+03:00",
+      "transfers": 1,
+      "flight_number": "6842",
+      "direct_only": false
     }
   }
 }
