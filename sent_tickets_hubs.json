@@ -812,6 +812,20 @@
       "transfers": 0,
       "flight_number": "482",
       "direct_only": true
+    },
+    "beach|SVX|BKK|2026-09-14T04:55:00+05:00|1|408|any|https://www.aviasales.ru/search/SVX1409BKK1": {
+      "first_seen": "2026-09-13T08:01:21.474870+00:00",
+      "last_sent": "2026-09-13T08:01:21.474880+00:00",
+      "mode": "beach",
+      "origin": "SVX",
+      "destination": "BKK",
+      "month": "2026-09",
+      "best_price": 24773,
+      "last_price": 24773,
+      "departure_at": "2026-09-14T04:55:00+05:00",
+      "transfers": 1,
+      "flight_number": "408",
+      "direct_only": false
     }
   }
 }
