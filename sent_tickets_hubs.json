@@ -966,6 +966,20 @@
       "transfers": 1,
       "flight_number": "60",
       "direct_only": false
+    },
+    "beach|KZN|BKK|2026-09-15T23:50:00+03:00|1|1281|any|https://www.aviasales.ru/search/KZN1509BKK1": {
+      "first_seen": "2026-09-14T23:31:00.592103+00:00",
+      "last_sent": "2026-09-14T23:31:00.592117+00:00",
+      "mode": "beach",
+      "origin": "KZN",
+      "destination": "BKK",
+      "month": "2026-09",
+      "best_price": 24490,
+      "last_price": 24490,
+      "departure_at": "2026-09-15T23:50:00+03:00",
+      "transfers": 1,
+      "flight_number": "1281",
+      "direct_only": false
     }
   }
 }
