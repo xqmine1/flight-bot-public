@@ -868,6 +868,20 @@
       "transfers": 1,
       "flight_number": "6438",
       "direct_only": false
+    },
+    "beach|TJM|BKK|2027-02-07T13:30:00+05:00|1|6438|any|https://www.aviasales.ru/search/TJM0702BKK1": {
+      "first_seen": "2026-09-14T09:50:48.743442+00:00",
+      "last_sent": "2026-09-14T09:50:48.743457+00:00",
+      "mode": "beach",
+      "origin": "TJM",
+      "destination": "BKK",
+      "month": "2027-02",
+      "best_price": 16624,
+      "last_price": 16624,
+      "departure_at": "2027-02-07T13:30:00+05:00",
+      "transfers": 1,
+      "flight_number": "6438",
+      "direct_only": false
     }
   }
 }
