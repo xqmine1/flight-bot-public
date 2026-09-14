@@ -896,6 +896,20 @@
       "transfers": 0,
       "flight_number": "482",
       "direct_only": true
+    },
+    "hubs|PEE|TAS|2027-01-06T02:15:00+05:00||482|direct|https://www.aviasales.ru/search/PEE0601TAS1": {
+      "first_seen": "2026-09-14T10:35:49.008375+00:00",
+      "last_sent": "2026-09-14T10:35:49.008389+00:00",
+      "mode": "hubs",
+      "origin": "PEE",
+      "destination": "TAS",
+      "month": "2027-01",
+      "best_price": 9445,
+      "last_price": 9445,
+      "departure_at": "2027-01-06T02:15:00+05:00",
+      "transfers": 0,
+      "flight_number": "482",
+      "direct_only": true
     }
   }
 }
