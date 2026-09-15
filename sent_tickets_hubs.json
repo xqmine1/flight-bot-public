@@ -980,6 +980,34 @@
       "transfers": 1,
       "flight_number": "1281",
       "direct_only": false
+    },
+    "beach|KZN|BKK|2026-09-16T00:50:00+03:00|1|5844|any|https://www.aviasales.ru/search/KZN1609BKK1": {
+      "first_seen": "2026-09-15T02:40:57.363082+00:00",
+      "last_sent": "2026-09-15T02:40:57.363097+00:00",
+      "mode": "beach",
+      "origin": "KZN",
+      "destination": "BKK",
+      "month": "2026-09",
+      "best_price": 23847,
+      "last_price": 23847,
+      "departure_at": "2026-09-16T00:50:00+03:00",
+      "transfers": 1,
+      "flight_number": "5844",
+      "direct_only": false
+    },
+    "beach|KZN|MLE|2026-09-15T23:50:00+03:00|1|1281|any|https://www.aviasales.ru/search/KZN1509MLE1": {
+      "first_seen": "2026-09-15T02:40:57.363103+00:00",
+      "last_sent": "2026-09-15T02:40:57.363105+00:00",
+      "mode": "beach",
+      "origin": "KZN",
+      "destination": "MLE",
+      "month": "2026-09",
+      "best_price": 24725,
+      "last_price": 24725,
+      "departure_at": "2026-09-15T23:50:00+03:00",
+      "transfers": 1,
+      "flight_number": "1281",
+      "direct_only": false
     }
   }
 }
