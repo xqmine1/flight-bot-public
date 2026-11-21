@@ -1,0 +1,53 @@
+name: Market Deal Monitor
+
+on:
+  schedule:
+    - cron: "17 */2 * * *"
+      timezone: "Asia/Yekaterinburg"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: market-deal-monitor-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  check-deals:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref }}
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Run market deal monitor
+        env:
+          TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          TRAVELPAYOUTS_TOKEN: ${{ secrets.TRAVELPAYOUTS_TOKEN }}
+        run: python deal_monitor.py
+
+      - name: Save price history
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          if [ -n "$(git status --porcelain deal_monitor_state.json)" ]; then
+            git add deal_monitor_state.json
+            git commit -m "Update market deal monitor state"
+            git push origin "HEAD:${GITHUB_REF_NAME}"
+          else
+            echo "No market history changes"
+          fi
