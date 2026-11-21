@@ -12,11 +12,13 @@ from config import (
     SEARCH_DAYS_AHEAD,
     DEDUP_KEEP_DAYS,
     SENT_DB_FILENAME,
-    BEACH_DESTINATION_LIMITS,
+    MAIN_DESTINATION_LIMITS,
     HUB_DESTINATION_LIMITS,
+    ALA_TAS_DESTINATION_LIMITS,
     DIRECT_ONLY_DESTINATIONS,
-    BEACH_ORIGINS,
+    MAIN_ORIGINS,
     HUB_ORIGINS,
+    ALA_TAS_ORIGINS,
     ORIGIN_NAMES,
     DESTINATION_NAMES,
     AIRPORT_CITY_NAMES,
@@ -43,12 +45,13 @@ if not TRAVELPAYOUTS_TOKEN:
 # ====== РЕЖИМ ПОИСКА ======
 
 # Режимы:
-# beach — пляжные направления
+# main — основные направления
 # hubs — хабы
-SEARCH_MODE = (os.getenv("SEARCH_MODE") or "beach").lower().strip()
+# ala_tas — перелёты Алматы ↔ Ташкент
+SEARCH_MODE = (os.getenv("SEARCH_MODE") or "main").lower().strip()
 
-# Антидубль включён для обоих режимов.
-DEDUP_ENABLED = SEARCH_MODE in ["beach", "hubs"]
+# Антидубль включён для всех режимов.
+DEDUP_ENABLED = SEARCH_MODE in ["main", "hubs", "ala_tas"]
 
 SENT_DB_PATH = Path(SENT_DB_FILENAME)
 
@@ -83,31 +86,40 @@ MONTHS = generate_search_months(SEARCH_START_DATE, SEARCH_END_DATE)
 # ====== РЕЖИМЫ И МАРШРУТЫ ======
 
 def get_active_origins():
-    if SEARCH_MODE == "beach":
-        return BEACH_ORIGINS
+    if SEARCH_MODE == "main":
+        return MAIN_ORIGINS
 
     if SEARCH_MODE == "hubs":
         return HUB_ORIGINS
+
+    if SEARCH_MODE == "ala_tas":
+        return ALA_TAS_ORIGINS
 
     raise ValueError(f"Неизвестный режим поиска: {SEARCH_MODE}")
 
 
 def get_active_destination_limits():
-    if SEARCH_MODE == "beach":
-        return BEACH_DESTINATION_LIMITS
+    if SEARCH_MODE == "main":
+        return MAIN_DESTINATION_LIMITS
 
     if SEARCH_MODE == "hubs":
         return HUB_DESTINATION_LIMITS
+
+    if SEARCH_MODE == "ala_tas":
+        return ALA_TAS_DESTINATION_LIMITS
 
     raise ValueError(f"Неизвестный режим поиска: {SEARCH_MODE}")
 
 
 def get_mode_title():
-    if SEARCH_MODE == "beach":
-        return "🏖 <b>Дешёвые пляжные направления найдены</b>"
+    if SEARCH_MODE == "main":
+        return "✈️ <b>Дешёвые авиабилеты найдены</b>"
 
     if SEARCH_MODE == "hubs":
         return "🧭 <b>Дешёвые хабы найдены</b>"
+
+    if SEARCH_MODE == "ala_tas":
+        return "✈️ <b>Дешёвые билеты Алматы ↔ Ташкент найдены</b>"
 
     return "✈️ <b>Дешёвые билеты найдены</b>"
 
@@ -115,13 +127,25 @@ def get_mode_title():
 def build_routes():
     routes = []
     active_origins = get_active_origins()
-    destination_limits = get_active_destination_limits()
+    destination_limits_by_origin = get_active_destination_limits()
 
     for origin in active_origins:
-        for destination, price_limit in destination_limits.items():
+        origin_destination_limits = destination_limits_by_origin.get(origin, {})
+
+        for destination, price_limit in origin_destination_limits.items():
+            if origin == destination:
+                continue
+
+            if (
+                SEARCH_MODE == "hubs"
+                and origin in ALA_TAS_ORIGINS
+                and destination in ALA_TAS_ORIGINS
+            ):
+                continue
+
             for month in MONTHS:
                 direct_only = (
-                    SEARCH_MODE == "hubs"
+                    SEARCH_MODE in ["hubs", "ala_tas"]
                     and destination in DIRECT_ONLY_DESTINATIONS
                 )
 
@@ -724,7 +748,11 @@ def main():
     print(f"Период поиска: {SEARCH_START_DATE} — {SEARCH_END_DATE}")
     print(f"Месяцы поиска: {MONTHS}")
     print(f"Активные города вылета: {active_origins}")
-    print(f"Активные направления: {list(active_limits.keys())}")
+    active_destinations = {
+        origin: list(destinations.keys())
+        for origin, destinations in active_limits.items()
+    }
+    print(f"Активные направления: {active_destinations}")
 
     for route in build_routes():
         origin = route["origin"]

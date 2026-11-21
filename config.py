@@ -9,33 +9,56 @@ SEARCH_DAYS_AHEAD = 180
 
 # ====== АНТИДУБЛЬ ======
 
-# Антидубль используется для обоих режимов: beach и hubs.
+# Антидубль используется во всех режимах поиска.
 DEDUP_KEEP_DAYS = 30
 
 # Оставляем старое имя файла, чтобы не менять workflow.
 SENT_DB_FILENAME = "sent_tickets_hubs.json"
 
 
-# ====== ЛИМИТЫ ПО НАПРАВЛЕНИЯМ ======
+# ====== ЛИМИТЫ ОСНОВНОГО РЕЖИМА ======
 
-BEACH_DESTINATION_LIMITS = {
-    "HKT": 25000,  # Пхукет
-    "BKK": 25000,  # Бангкок
-    "DPS": 25000,  # Бали
-    "KUL": 25000,  # Куала-Лумпур
-    "CXR": 25000,  # Нячанг
-    "DAD": 25000,  # Дананг
-    "MLE": 25000,  # Мальдивы
-    "CMB": 25000,  # Шри-Ланка
+MAIN_DESTINATION_LIMITS = {
+    "TAS": {
+        "HKT": 12000,  # Пхукет
+        "BKK": 12000,  # Бангкок
+        "DPS": 18000,  # Бали
+        "KUL": 15000,  # Куала-Лумпур
+        "CXR": 18000,  # Нячанг
+        "DAD": 18000,  # Дананг
+        "MLE": 18000,  # Мальдивы
+        "CMB": 18000,  # Шри-Ланка
+    },
+    "ALA": {
+        "HKT": 18000,  # Пхукет
+        "BKK": 18000,  # Бангкок
+        "DPS": 18000,  # Бали
+        "KUL": 18000,  # Куала-Лумпур
+        "CXR": 18000,  # Нячанг
+        "DAD": 18000,  # Дананг
+        "MLE": 18000,  # Мальдивы
+        "CMB": 18000,  # Шри-Ланка
+    },
 }
 
-HUB_DESTINATION_LIMITS = {
+HUB_COMMON_DESTINATION_LIMITS = {
     "HAN": 25000,  # Ханой, можно с пересадками
     "SGN": 25000,  # Хошимин, можно с пересадками
     "SCO": 6000,   # Актау, только прямой
     "NQZ": 7000,   # Астана, только прямой
-    "ALA": 10000,  # Алматы, только прямой
-    "TAS": 10000,  # Ташкент, только прямой
+}
+
+HUB_DESTINATION_LIMITS = {
+    "ALA": {
+        **HUB_COMMON_DESTINATION_LIMITS,
+        "IST": 8000,  # Стамбул
+    },
+    "TAS": {
+        **HUB_COMMON_DESTINATION_LIMITS,
+        "DXB": 8000,  # Дубай
+        "AUH": 8000,  # Абу-Даби
+        "IST": 8000,  # Стамбул
+    },
 }
 
 DIRECT_ONLY_DESTINATIONS = {
@@ -48,14 +71,23 @@ DIRECT_ONLY_DESTINATIONS = {
 
 # ====== ГОРОДА ВЫЛЕТА ======
 
-BEACH_ORIGINS = ["SVX", "KZN", "UFA", "TJM", "PEE", "CEK"]
+MAIN_ORIGINS = ["ALA", "TAS"]
 
-HUB_ORIGINS = ["SVX", "TJM", "PEE", "CEK"]
+HUB_ORIGINS = ["ALA", "TAS"]
+
+ALA_TAS_ORIGINS = ["ALA", "TAS"]
+
+ALA_TAS_DESTINATION_LIMITS = {
+    "ALA": {"TAS": 5000},
+    "TAS": {"ALA": 5000},
+}
 
 
 # ====== НАЗВАНИЯ ГОРОДОВ ======
 
 ORIGIN_NAMES = {
+    "ALA": "Алматы",
+    "TAS": "Ташкент",
     "SVX": "Екатеринбург",
     "KZN": "Казань",
     "UFA": "Уфа",
@@ -82,6 +114,9 @@ DESTINATION_NAMES = {
     "NQZ": "Астана",
     "ALA": "Алматы",
     "TAS": "Ташкент",
+    "DXB": "Дубай",
+    "AUH": "Абу-Даби",
+    "IST": "Стамбул",
 }
 
 AIRPORT_CITY_NAMES = {

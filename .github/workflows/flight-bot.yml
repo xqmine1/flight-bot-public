@@ -6,11 +6,12 @@ on:
       mode:
         description: "Search mode"
         required: true
-        default: "beach"
+        default: "main"
         type: choice
         options:
-          - beach
+          - main
           - hubs
+          - ala_tas
 
 permissions:
   contents: write
