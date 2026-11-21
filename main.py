@@ -10,6 +10,7 @@ from config import (
     CURRENCY,
     MAX_TELEGRAM_MESSAGE_LENGTH,
     SEARCH_DAYS_AHEAD,
+    HUB_SEARCH_DAYS_AHEAD,
     DEDUP_KEEP_DAYS,
     SENT_DB_FILENAME,
     MAIN_DESTINATION_LIMITS,
@@ -59,7 +60,10 @@ SENT_DB_PATH = Path(SENT_DB_FILENAME)
 # ====== ПЕРИОД ПОИСКА ======
 
 SEARCH_START_DATE = datetime.now(timezone.utc).date()
-SEARCH_END_DATE = SEARCH_START_DATE + timedelta(days=SEARCH_DAYS_AHEAD)
+SEARCH_DAYS_FOR_MODE = (
+    HUB_SEARCH_DAYS_AHEAD if SEARCH_MODE == "hubs" else SEARCH_DAYS_AHEAD
+)
+SEARCH_END_DATE = SEARCH_START_DATE + timedelta(days=SEARCH_DAYS_FOR_MODE)
 
 
 def generate_search_months(start_date: date, end_date: date):

@@ -5,6 +5,7 @@ MAX_TELEGRAM_MESSAGE_LENGTH = 3800
 
 # Бот ищет билеты с сегодняшнего дня на N дней вперёд.
 SEARCH_DAYS_AHEAD = 180
+HUB_SEARCH_DAYS_AHEAD = 60  # примерно два месяца
 
 
 # ====== АНТИДУБЛЬ ======
@@ -42,19 +43,20 @@ MAIN_DESTINATION_LIMITS = {
 }
 
 HUB_COMMON_DESTINATION_LIMITS = {
-    "HAN": 25000,  # Ханой, можно с пересадками
     "SGN": 25000,  # Хошимин, можно с пересадками
     "SCO": 6000,   # Актау, только прямой
-    "NQZ": 7000,   # Астана, только прямой
 }
 
 HUB_DESTINATION_LIMITS = {
     "ALA": {
         **HUB_COMMON_DESTINATION_LIMITS,
+        "HAN": 15000,  # Ханой, можно с пересадками
         "IST": 8000,  # Стамбул
     },
     "TAS": {
         **HUB_COMMON_DESTINATION_LIMITS,
+        "HAN": 18000,  # Ханой, можно с пересадками
+        "SGN": 18000,  # Хошимин, можно с пересадками
         "DXB": 8000,  # Дубай
         "AUH": 8000,  # Абу-Даби
         "IST": 8000,  # Стамбул
