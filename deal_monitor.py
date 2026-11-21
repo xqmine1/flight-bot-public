@@ -69,7 +69,14 @@ def api_get(url: str, params: dict):
                     time.sleep(5 * attempt)
                     continue
 
-            response.raise_for_status()
+            if response.status_code >= 400:
+                detail = response.text[:300]
+                if TRAVELPAYOUTS_TOKEN:
+                    detail = detail.replace(TRAVELPAYOUTS_TOKEN, "[redacted]")
+                raise RuntimeError(
+                    f"Travelpayouts вернул HTTP {response.status_code}: {detail}"
+                )
+
             payload = response.json()
 
             if payload.get("success") is False:
