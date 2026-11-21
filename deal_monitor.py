@@ -17,7 +17,7 @@ from config import (
 )
 
 
-API_URL = "https://api.travelpayouts.com/aviasales/v3/search_by_price_range"
+API_URL = "https://api.travelpayouts.com/aviasales/v3/prices_for_dates"
 SPECIAL_OFFERS_URL = "https://api.travelpayouts.com/aviasales/v3/get_special_offers"
 TELEGRAM_TOKEN = os.getenv("TELEGRAM_TOKEN")
 TELEGRAM_CHAT_ID = os.getenv("TELEGRAM_CHAT_ID")
@@ -28,8 +28,8 @@ DEAL_MONITOR_MIN_DISCOUNT = 0.30
 DEAL_MONITOR_STRONG_DISCOUNT = 0.40
 DEAL_MONITOR_LOOKAHEAD_DAYS = SEARCH_DAYS_AHEAD
 DEAL_MONITOR_MAX_PRICE = 500000
-DEAL_MONITOR_PAGE_SIZE = 100
-DEAL_MONITOR_MAX_PAGES = 20
+DEAL_MONITOR_PAGE_SIZE = 1000
+DEAL_MONITOR_MAX_PAGES = 5
 DEAL_MONITOR_MIN_REFERENCE_SAMPLES = 5
 DEAL_MONITOR_HISTORY_DAYS = 90
 DEAL_MONITOR_MAX_ALERTS = 20
@@ -132,6 +132,9 @@ def normalize_candidate(raw: dict, origin: str):
     if not destination or destination == origin or not departure or price <= 0:
         return None
 
+    if price > DEAL_MONITOR_MAX_PRICE:
+        return None
+
     if not TODAY <= departure <= END_DATE:
         return None
 
@@ -162,49 +165,64 @@ def normalize_candidate(raw: dict, origin: str):
     }
 
 
+def generate_search_months():
+    months = []
+    current = date(TODAY.year, TODAY.month, 1)
+    last = date(END_DATE.year, END_DATE.month, 1)
+
+    while current <= last:
+        months.append(current.strftime("%Y-%m"))
+        if current.month == 12:
+            current = date(current.year + 1, 1, 1)
+        else:
+            current = date(current.year, current.month + 1, 1)
+
+    return months
+
+
 def get_all_destination_candidates(origin: str):
     candidates = []
 
-    for page in range(1, DEAL_MONITOR_MAX_PAGES + 1):
-        payload = api_get(
-            API_URL,
-            {
-                "origin": origin,
-                "destination": "-",
-                "value_min": 1,
-                "value_max": DEAL_MONITOR_MAX_PRICE,
-                "one_way": "true",
-                "direct": "false",
-                "locale": "ru",
-                "currency": CURRENCY,
-                "market": "ru",
-                "limit": DEAL_MONITOR_PAGE_SIZE,
-                "page": page,
-            },
-        )
-
-        page_data = payload.get("data") or []
-        if not isinstance(page_data, list) or not page_data:
-            break
-
-        candidates.extend(
-            candidate
-            for candidate in (
-                normalize_candidate(item, origin)
-                for item in page_data
-                if isinstance(item, dict)
+    for month in generate_search_months():
+        for page in range(1, DEAL_MONITOR_MAX_PAGES + 1):
+            payload = api_get(
+                API_URL,
+                {
+                    "origin": origin,
+                    "departure_at": month,
+                    "one_way": "true",
+                    "direct": "false",
+                    "sorting": "route",
+                    "unique": "true",
+                    "currency": CURRENCY,
+                    "market": "ru",
+                    "limit": DEAL_MONITOR_PAGE_SIZE,
+                    "page": page,
+                },
             )
-            if candidate
-        )
 
-        if len(page_data) < DEAL_MONITOR_PAGE_SIZE:
-            break
+            page_data = payload.get("data") or []
+            if not isinstance(page_data, list) or not page_data:
+                break
 
-        if page == DEAL_MONITOR_MAX_PAGES:
-            print(
-                f"{origin}: достигнут предел страниц поиска "
-                f"({DEAL_MONITOR_MAX_PAGES})"
+            candidates.extend(
+                candidate
+                for candidate in (
+                    normalize_candidate(item, origin)
+                    for item in page_data
+                    if isinstance(item, dict)
+                )
+                if candidate
             )
+
+            if len(page_data) < DEAL_MONITOR_PAGE_SIZE:
+                break
+
+            if page == DEAL_MONITOR_MAX_PAGES:
+                print(
+                    f"{origin}, {month}: достигнут предел страниц поиска "
+                    f"({DEAL_MONITOR_MAX_PAGES})"
+                )
 
     return candidates
 
@@ -353,7 +371,7 @@ def build_reference_prices(state: dict, daily_route_prices: dict):
     today_key = TODAY.isoformat()
 
     for route_key, departure_prices in daily_route_prices.items():
-        if len(departure_prices) < DEAL_MONITOR_MIN_REFERENCE_SAMPLES:
+        if not departure_prices:
             continue
 
         current_median = int(statistics.median(departure_prices.values()))
@@ -375,11 +393,6 @@ def build_reference_prices(state: dict, daily_route_prices: dict):
             references[route_key] = {
                 "price": int(statistics.median(prior_prices)),
                 "source": "история цен бота за последние 90 дней",
-            }
-        else:
-            references[route_key] = {
-                "price": current_median,
-                "source": "цены на похожие даты в текущей выдаче",
             }
 
         samples.setdefault(today_key, current_median)
