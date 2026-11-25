@@ -381,17 +381,31 @@
     },
     "hubs|TAS|SGN|2026-11-27T01:40:00+05:00|1|2235|any|https://www.aviasales.ru/search/TAS2711SGN1": {
       "first_seen": "2026-11-24T16:22:48.710418+00:00",
-      "last_sent": "2026-11-25T09:52:21.944606+00:00",
+      "last_sent": "2026-11-25T19:39:01.128208+00:00",
       "mode": "hubs",
       "origin": "TAS",
       "destination": "SGN",
       "month": "2026-11",
-      "best_price": 16725,
-      "last_price": 16725,
+      "best_price": 16703,
+      "last_price": 16703,
       "departure_at": "2026-11-27T01:40:00+05:00",
       "transfers": 1,
       "flight_number": "2235",
       "direct_only": false
+    },
+    "hubs|ALA|SCO|2026-12-06T18:50:00+06:00||7175|direct|https://www.aviasales.ru/search/ALA0612SCO1": {
+      "first_seen": "2026-11-25T19:39:01.128182+00:00",
+      "last_sent": "2026-11-25T19:39:01.128199+00:00",
+      "mode": "hubs",
+      "origin": "ALA",
+      "destination": "SCO",
+      "month": "2026-12",
+      "best_price": 4662,
+      "last_price": 4662,
+      "departure_at": "2026-12-06T18:50:00+06:00",
+      "transfers": 0,
+      "flight_number": "7175",
+      "direct_only": true
     }
   }
 }
