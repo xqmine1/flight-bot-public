@@ -448,6 +448,62 @@
       "transfers": 0,
       "flight_number": "205",
       "direct_only": true
+    },
+    "ala_tas|TAS|ALA|2026-11-30T21:00:00+05:00||205|direct|https://www.aviasales.ru/search/TAS3011ALA1": {
+      "first_seen": "2026-11-26T11:26:23.875652+00:00",
+      "last_sent": "2026-11-26T11:26:23.875667+00:00",
+      "mode": "ala_tas",
+      "origin": "TAS",
+      "destination": "ALA",
+      "month": "2026-11",
+      "best_price": 4946,
+      "last_price": 4946,
+      "departure_at": "2026-11-30T21:00:00+05:00",
+      "transfers": 0,
+      "flight_number": "205",
+      "direct_only": true
+    },
+    "ala_tas|TAS|ALA|2026-12-21T21:00:00+05:00||205|direct|https://www.aviasales.ru/search/TAS2112ALA1": {
+      "first_seen": "2026-11-26T11:26:23.875672+00:00",
+      "last_sent": "2026-11-26T11:26:23.875674+00:00",
+      "mode": "ala_tas",
+      "origin": "TAS",
+      "destination": "ALA",
+      "month": "2026-12",
+      "best_price": 4947,
+      "last_price": 4947,
+      "departure_at": "2026-12-21T21:00:00+05:00",
+      "transfers": 0,
+      "flight_number": "205",
+      "direct_only": true
+    },
+    "ala_tas|TAS|ALA|2027-01-24T19:05:00+05:00||205|direct|https://www.aviasales.ru/search/TAS2401ALA1": {
+      "first_seen": "2026-11-26T11:26:23.875677+00:00",
+      "last_sent": "2026-11-26T11:26:23.875678+00:00",
+      "mode": "ala_tas",
+      "origin": "TAS",
+      "destination": "ALA",
+      "month": "2027-01",
+      "best_price": 4946,
+      "last_price": 4946,
+      "departure_at": "2027-01-24T19:05:00+05:00",
+      "transfers": 0,
+      "flight_number": "205",
+      "direct_only": true
+    },
+    "ala_tas|TAS|ALA|2027-02-01T21:00:00+05:00||205|direct|https://www.aviasales.ru/search/TAS0102ALA1": {
+      "first_seen": "2026-11-26T11:26:23.875682+00:00",
+      "last_sent": "2026-11-26T11:26:23.875684+00:00",
+      "mode": "ala_tas",
+      "origin": "TAS",
+      "destination": "ALA",
+      "month": "2027-02",
+      "best_price": 4920,
+      "last_price": 4920,
+      "departure_at": "2027-02-01T21:00:00+05:00",
+      "transfers": 0,
+      "flight_number": "205",
+      "direct_only": true
     }
   }
 }
