@@ -406,6 +406,48 @@
       "transfers": 0,
       "flight_number": "7175",
       "direct_only": true
+    },
+    "ala_tas|TAS|ALA|2026-11-27T05:40:00+05:00||205|direct|https://www.aviasales.ru/search/TAS2711ALA1": {
+      "first_seen": "2026-11-26T02:26:21.848945+00:00",
+      "last_sent": "2026-11-26T02:26:21.848959+00:00",
+      "mode": "ala_tas",
+      "origin": "TAS",
+      "destination": "ALA",
+      "month": "2026-11",
+      "best_price": 4956,
+      "last_price": 4956,
+      "departure_at": "2026-11-27T05:40:00+05:00",
+      "transfers": 0,
+      "flight_number": "205",
+      "direct_only": true
+    },
+    "ala_tas|TAS|ALA|2027-01-25T21:00:00+05:00||205|direct|https://www.aviasales.ru/search/TAS2501ALA1": {
+      "first_seen": "2026-11-26T02:26:21.848965+00:00",
+      "last_sent": "2026-11-26T02:26:21.848967+00:00",
+      "mode": "ala_tas",
+      "origin": "TAS",
+      "destination": "ALA",
+      "month": "2027-01",
+      "best_price": 4956,
+      "last_price": 4956,
+      "departure_at": "2027-01-25T21:00:00+05:00",
+      "transfers": 0,
+      "flight_number": "205",
+      "direct_only": true
+    },
+    "ala_tas|TAS|ALA|2027-02-05T05:40:00+05:00||205|direct|https://www.aviasales.ru/search/TAS0502ALA1": {
+      "first_seen": "2026-11-26T02:26:21.848971+00:00",
+      "last_sent": "2026-11-26T02:26:21.848973+00:00",
+      "mode": "ala_tas",
+      "origin": "TAS",
+      "destination": "ALA",
+      "month": "2027-02",
+      "best_price": 4956,
+      "last_price": 4956,
+      "departure_at": "2027-02-05T05:40:00+05:00",
+      "transfers": 0,
+      "flight_number": "205",
+      "direct_only": true
     }
   }
 }
