@@ -546,6 +546,20 @@
       "transfers": 0,
       "flight_number": "205",
       "direct_only": true
+    },
+    "ala_tas|TAS|ALA|2027-01-29T05:40:00+05:00||205|direct|https://www.aviasales.ru/search/TAS2901ALA1": {
+      "first_seen": "2026-11-27T12:23:13.972420+00:00",
+      "last_sent": "2026-11-27T12:23:13.972433+00:00",
+      "mode": "ala_tas",
+      "origin": "TAS",
+      "destination": "ALA",
+      "month": "2027-01",
+      "best_price": 4942,
+      "last_price": 4942,
+      "departure_at": "2027-01-29T05:40:00+05:00",
+      "transfers": 0,
+      "flight_number": "205",
+      "direct_only": true
     }
   }
 }
